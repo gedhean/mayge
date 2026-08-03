@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mayara e Gêdhean &middot; 28.11.2026 &middot; Lagoinha, Ceará</title>
+<meta name="description" content="Convite de casamento de Mayara e Gêdhean — 28 de novembro de 2026, Montepascual Ecovillage, Lagoinha, Ceará.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Definições SVG reutilizáveis ===== -->
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- pin de localização (sólido) -->
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M12 2C8.5 2 5.7 4.8 5.7 8.3c0 4.6 5.5 12.1 6.3 13.2.8-1.1 6.3-8.6 6.3-13.2C18.3 4.8 15.5 2 12 2Zm0 8.8a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/>
+    </symbol>
+    <!-- pin de localização (traço) -->
+    <symbol id="i-pin-line" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+        d="M12 21.5s6.5-7.3 6.5-12.4A6.5 6.5 0 0 0 5.5 9.1C5.5 14.2 12 21.5 12 21.5Z"/>
+      <circle cx="12" cy="9.1" r="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <!-- relógio -->
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M12 7v5.4l3.6 2.2"/>
+    </symbol>
+    <!-- carro -->
+    <symbol id="i-car" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+        d="M3.2 15.4v-2.6l1.6-4a2 2 0 0 1 1.9-1.3h10.6a2 2 0 0 1 1.9 1.3l1.6 4v2.6a1 1 0 0 1-1 1h-.9M4.2 16.4h-.9M4.6 12.8h14.8"/>
+      <circle cx="7.2" cy="16.6" r="1.7" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="16.8" cy="16.6" r="1.7" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <!-- escudo -->
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+        d="M12 21.2c4-1.9 6.5-5.4 6.5-9.6V5.4L12 2.8 5.5 5.4v6.2c0 4.2 2.5 7.7 6.5 9.6Z"/>
+    </symbol>
+    <!-- globo -->
+    <symbol id="i-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.4" d="M3 12h18M12 3c2.6 2.5 4 5.7 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.7-4-9s1.4-6.5 4-9Z"/>
+    </symbol>
+    <!-- whatsapp -->
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path fill="currentColor"
+        d="M9.6 7.7c.2-.1.5-.1.7.2l.9 1.4c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6 0l.7-.5c.2-.1.4-.1.6 0l1.4.9c.3.2.3.5.2.7-.4.8-1.3 1.3-2.2 1.1-2.7-.5-5.2-3-5.7-5.7-.2-.9.3-1.8 1.2-2.1Z"/>
+    </symbol>
+    <!-- instagram -->
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3.4" y="3.4" width="17.2" height="17.2" rx="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="16.9" cy="7.1" r="1.05" fill="currentColor"/>
+    </symbol>
+    <!-- casinha -->
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+        d="M4 10.4 12 4l8 6.4V20a.9.9 0 0 1-.9.9H4.9A.9.9 0 0 1 4 20v-9.6Z"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M9.7 20.9v-5.5h4.6v5.5"/>
+    </symbol>
+    <!-- coração -->
+    <symbol id="i-heart" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
+        d="M12 20.3s-7.6-4.6-7.6-9.8a4.2 4.2 0 0 1 7.6-2.5 4.2 4.2 0 0 1 7.6 2.5c0 5.2-7.6 9.8-7.6 9.8Z"/>
+    </symbol>
+    <!-- kitesurf / mar -->
+    <symbol id="i-kite" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"
+        d="M4.5 5.2c4.4-1.2 8.6.6 11 4.3M6.4 9.1c3-.8 5.9.4 7.6 3"/>
+      <circle cx="10.6" cy="14.7" r="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+        d="M11.9 15.9l2.6 2.1M3.2 20.2c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0 3 1 4.5 0"/>
+    </symbol>
+    <!-- palmeira simples (divisores) -->
+    <symbol id="i-palm-mini" viewBox="0 0 32 40">
+      <path fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"
+        d="M16 38c-.6-8 .3-14.6 1.4-19.8M17.4 18.2c-2.6-3-6.4-4.6-10-4 2 3.6 5.9 5.6 10 4Zm0 0c1.6-3.6 5-6 8.9-6.2-1 4-4.6 6.8-8.9 6.2Zm0 0c-3.2-1.9-5-5.4-4.6-9 3.6 1.4 5.7 5 4.6 9Zm0 0c2.9-2.2 6.9-2.6 10.2-.9-2.8 2.9-7 3.5-10.2.9Zm0 0c-.5-4 1.4-7.8 4.9-9.7.9 4-1 7.9-4.9 9.7Z"/>
+      <path fill="none" stroke="currentColor" stroke-width=".95" stroke-linecap="round"
+        d="M12.6 38.4c1.8-1 4.6-1 6.7 0"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main class="invite">
+
+  <!-- ============ CABEÇALHO ============ -->
+  <header class="hero">
+    <!-- arte de coqueiros / praia no canto superior direito -->
+    <div class="hero__art" aria-hidden="true">
+      <svg viewBox="0 0 460 420" preserveAspectRatio="xMaxYMin slice">
+        <g fill="none" stroke="currentColor" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round">
+          <!-- tronco 1 -->
+          <path d="M120 24c22 44 44 96 58 158 8 34 12 66 12 96"/>
+          <path d="M126 30c20 44 41 96 55 157"/>
+          <!-- folhas do coqueiro 1 -->
+          <path d="M120 24C96 6 66 2 40 14c22 20 54 24 80 10Z"/>
+          <path d="M120 24c-4-22 6-44 26-58-16-2-34 8-42 26-4 10-4 22 0 32Z"/>
+          <path d="M120 24c18-16 44-20 68-10-16 18-44 24-68 10Z"/>
+          <path d="M120 24c22 2 42 16 52 38-24 2-46-12-52-38Z"/>
+          <path d="M120 24c-20 8-34 26-38 48 22-6 38-26 38-48Z"/>
+          <!-- tronco 2 -->
+          <path d="M258 46c14 36 20 72 20 110 0 40-6 78-18 114"/>
+          <path d="M264 52c12 34 18 70 18 108"/>
+          <!-- folhas do coqueiro 2 -->
+          <path d="M258 46c-22-16-50-18-74-6 20 18 50 20 74 6Z"/>
+          <path d="M258 46c2-22 16-42 38-52-14-4-32 4-42 20-6 10-6 22 4 32Z"/>
+          <path d="M258 46c20-14 46-16 68-4-18 16-46 20-68 4Z"/>
+          <path d="M258 46c20 6 36 22 42 44-24-2-42-20-42-44Z"/>
+          <path d="M258 46c-18 10-30 28-32 50 20-8 34-28 32-50Z"/>
+          <!-- coqueiro 3 (menor, ao fundo) -->
+          <path d="M376 84c8 30 10 60 8 92" opacity=".75"/>
+          <path d="M376 84c-16-12-38-14-56-6 16 14 38 16 56 6Z" opacity=".75"/>
+          <path d="M376 84c0-18 12-34 30-42-12-2-26 4-34 18-4 8-4 18 4 24Z" opacity=".75"/>
+          <path d="M376 84c16-10 38-12 54-2-14 14-38 16-54 2Z" opacity=".75"/>
+          <path d="M376 84c16 6 28 20 32 38-20-2-34-18-32-38Z" opacity=".75"/>
+          <!-- horizonte / mar -->
+          <path d="M186 236c46-16 100-22 156-18 44 4 84 14 118 30" opacity=".7"/>
+          <path d="M204 258c50-14 106-18 160-12" opacity=".55"/>
+          <path d="M240 292c44-10 96-12 146-6" opacity=".45"/>
+          <path d="M282 330c40-8 88-10 134-4" opacity=".35"/>
+          <path d="M330 366c34-6 74-8 112-4" opacity=".28"/>
+          <!-- duna / morro -->
+          <path d="M300 214c22-16 48-22 72-16 20 6 34 18 44 32" opacity=".6"/>
+          <path d="M352 200c14-10 32-12 48-6" opacity=".45"/>
+        </g>
+      </svg>
+    </div>
+
+    <p class="hero__monogram">M &amp; G</p>
+
+    <p class="hero__date">28.11.2026</p>
+
+    <h1 class="hero__names">Mayara <span>e</span> Gêdhean</h1>
+
+    <p class="hero__place">Lagoinha <span class="dot">&bull;</span> Ceará</p>
+
+    <p class="hero__intro">
+      Estamos muito felizes em celebrar este dia especial com vocês!<br>
+      Para ajudar na organização da sua viagem, reunimos todas<br>
+      as informações importantes.
+    </p>
+
+    <div class="divider" role="presentation">
+      <span class="divider__line"></span>
+      <svg class="divider__palm"><use href="#i-palm-mini"/></svg>
+      <span class="divider__line"></span>
+    </div>
+  </header>
+
+  <!-- ============ LOCAL DA CERIMÔNIA ============ -->
+  <section class="card card--split" aria-labelledby="t-local">
+    <div class="card__col">
+      <div class="badge badge--solid">
+        <svg class="badge__icon"><use href="#i-pin"/></svg>
+      </div>
+      <div class="card__body">
+        <h2 class="title" id="t-local">Local da Cerimônia</h2>
+        <p class="venue">Montepascual Ecovillage</p>
+        <a class="btn btn--solid" href="https://maps.app.goo.gl/tbtGXE6ffbpdt6jo9" target="_blank" rel="noopener">
+          <svg class="btn__icon"><use href="#i-pin-line"/></svg>
+          <span>Ver localização</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="card__col card__col--text">
+      <p class="lead">
+        A pousada do Montepascual Ecovillage<br>
+        não possui mais vagas para hospedagem<br>
+        na data do evento.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ TRÊS COLUNAS ============ -->
+  <section class="card card--trio">
+
+    <article class="col">
+      <header class="col__head">
+        <div class="badge badge--solid">
+          <svg class="badge__icon"><use href="#i-clock"/></svg>
+        </div>
+        <h2 class="title">Programação</h2>
+      </header>
+      <ul class="list">
+        <li>Início do casamento: 16:00</li>
+        <li>Cerimônia: 16:50</li>
+        <li>Encerramento: 22:00</li>
+      </ul>
+      <svg class="heart heart--right" aria-hidden="true"><use href="#i-heart"/></svg>
+    </article>
+
+    <article class="col">
+      <header class="col__head">
+        <div class="badge badge--solid">
+          <svg class="badge__icon"><use href="#i-car"/></svg>
+        </div>
+        <h2 class="title">Como chegar</h2>
+
+      </header>
+      <ul class="facts">
+        <li>
+          <svg class="facts__icon"><use href="#i-car"/></svg>
+          <span> Fortaleza &rarr; Lagoinha: 120 km</span>
+        </li>
+        <li>
+          <svg class="facts__icon"><use href="#i-clock"/></svg>
+          <span>Tempo médio: 1h50</span>
+        </li>
+        <li class="facts__note">
+          Acesso pela CE-085 (estrada em boas condições)
+        </li>
+      </ul>
+      <svg class="heart heart--right" aria-hidden="true"><use href="#i-heart"/></svg>
+    </article>
+
+    <article class="col">
+      <header class="col__head">
+        <div class="badge badge--solid">
+          <svg class="badge__icon"><use href="#i-shield"/></svg>
+        </div>
+        <h2 class="title">Segurança<br>e conforto</h2>
+      </header>
+      <p class="paragraph">
+        Sugerimos que garantam sua hospedagem com antecedência
+        para que possam aproveitar o evento com tranquilidade e
+        total conforto.
+      </p>
+      <svg class="heart heart--right" aria-hidden="true"><use href="#i-heart"/></svg>
+    </article>
+
+  </section>
+
+  <!-- ============ SOBRE A REGIÃO ============ -->
+  <section class="card card--region" aria-labelledby="t-regiao">
+    <div class="card__col card__col--wide">
+      <div class="region__art" aria-hidden="true">
+        <svg viewBox="0 0 130 130">
+          <g fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+            <!-- tronco -->
+            <path d="M44 30c-3 18-4 40-3 58"/>
+            <!-- folhas -->
+            <path d="M44 30C33 18 16 14 4 20c10 12 27 16 40 10Z"/>
+            <path d="M44 30c-3-14 3-27 15-35-10 0-21 8-25 19-3 7-1 13 10 16Z"/>
+            <path d="M44 30c9-11 25-15 40-10-9 12-26 17-40 10Z"/>
+            <path d="M44 30c13 1 24 10 29 23-14 1-27-8-29-23Z"/>
+            <path d="M44 30c-12 5-20 16-22 30 13-4 23-16 22-30Z"/>
+            <!-- sol -->
+            <circle cx="90" cy="46" r="7"/>
+            <path d="M90 32v-6M90 66v-6M104 46h6M70 46h6M100 36l4-4M76 60l4-4M100 56l4 4M76 32l4 4"/>
+            <!-- ondas -->
+            <path d="M8 100c8-6 16-6 24 0s16 6 24 0 16-6 24 0 16 6 24 0"/>
+            <path d="M8 112c8-6 16-6 24 0s16 6 24 0 16-6 24 0 16 6 24 0"/>
+            <path d="M20 124c7-5 14-5 21 0s14 5 21 0 14-5 21 0"/>
+          </g>
+        </svg>
+      </div>
+      <div class="card__body">
+        <h2 class="title" id="t-regiao">Sobre a Região</h2>
+        <p class="paragraph paragraph--tight">
+          Toda a região da Lagoinha é muito próxima,<br>
+          facilitando o deslocamento.<br>
+          Além das opções abaixo, você também pode<br>
+          encontrar outras hospedagens pelo Booking.
+        </p>
+      </div>
+    </div>
+
+    <div class="card__col card__col--action">
+      <a class="btn btn--outline" href="https://www.booking.com/searchresults.pt-br.html?ss=Lagoinha%2C+Cear%C3%A1%2C+Brasil&amp;group_adults=1&amp;group_children=0&amp;no_rooms=1&amp;label=gen173nr-10CAEoggI46AdILVgEaCCIAQKYATO4AQfIAQ3YAQPoAQH4AQGIAgGoAgG4AsaIv9MGwAIB0gIkMmExOTcwM2YtYjZjMC00MzU3LThkMWEtZTdmOTI1ZDEwYmI12AIB4AIB&amp;aid=304142&amp;lang=pt-br&amp;sb=1&amp;src_elem=sb&amp;src=index&amp;dest_id=-651087&amp;dest_type=city&amp;ac_position=0&amp;ac_click_type=b&amp;ac_langcode=xb&amp;ac_suggestion_list_length=5&amp;search_selected=true&amp;search_pageview_id=8a7b9de3dcc01b24&amp;ac_meta=GhA4YTdiOWRlM2RjYzAxYjI0IAAoATICeGI6CUxhZ29pbmhhIA%3D%3D&amp;checkin=2026-11-28&amp;checkout=2026-11-29&amp;sb_changed_dest=1&amp;efdco=1&amp;sb_changed_dates=1" target="_blank" rel="noopener">
+        <svg class="btn__icon"><use href="#i-globe"/></svg>
+        <span>Pesquisar no Booking</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ SUGESTÕES DE HOSPEDAGEM ============ -->
+  <section class="lodging" aria-labelledby="t-hosp">
+    <h2 class="section-title" id="t-hosp">Sugestões de Hospedagem</h2>
+
+    <div class="lodging__grid">
+
+      <article class="stay">
+        <div class="stay__avatar" aria-hidden="true">
+          <svg viewBox="0 0 60 60">
+            <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 30 26 20l12 10v16H14V30Z"/>
+              <path d="M22 46v-9h8v9"/>
+              <path d="M26 20v-5"/>
+              <circle cx="43" cy="24" r="5"/>
+              <path d="M43 14v-4M43 38v-4M53 24h4M29 24h4M50 17l3-3M36 31l3-3M50 31l3 3"/>
+              <path d="M8 52c5-4 10-4 15 0s10 4 15 0 10-4 15 0"/>
+            </g>
+          </svg>
+        </div>
+
+        <h3 class="stay__name">Pousada do Sol</h3>
+
+        <ul class="stay__list">
+          <li>
+            <svg class="stay__icon"><use href="#i-whatsapp"/></svg>
+            <span><a class="tel" href="https://wa.me/5585992634618" target="_blank" rel="noopener">(85)&nbsp;99263-4618</a>&nbsp;(Falar com Carla)</span>
+          </li>
+          <li>
+            <svg class="stay__icon"><use href="#i-home"/></svg>
+            <span>Pousada simples, bem limpa e aconchegante.</span>
+          </li>
+          <li>
+            <svg class="stay__icon"><use href="#i-pin-line"/></svg>
+            <span> Muito próxima
+              ao local do evento. Não é à beira-mar.</span>
+          </li>
+        </ul>
+
+        <a class="btn btn--outline btn--sm" href="https://www.instagram.com/pousadadosol2020?igsh=MXYwd3RqdzR5bnV1ag==" target="_blank" rel="noopener">
+          <svg class="btn__icon"><use href="#i-instagram"/></svg>
+          <span>@pousadadosol2020</span>
+        </a>
+      </article>
+
+      <div class="lodging__sep" aria-hidden="true">
+        <svg class="lodging__palm"><use href="#i-palm-mini"/></svg>
+      </div>
+
+      <article class="stay">
+        <div class="stay__avatar" aria-hidden="true">
+          <svg viewBox="0 0 60 60">
+            <g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M27 22c-2 12-2 22-1 30"/>
+              <path d="M27 22c-7-8-18-10-26-6 7 8 18 11 26 6Z"/>
+              <path d="M27 22c-2-9 2-18 10-23-7 0-14 5-17 13-2 5-1 9 7 10Z"/>
+              <path d="M27 22c6-8 17-10 27-7-6 8-18 12-27 7Z"/>
+              <path d="M27 22c9 1 16 7 19 16-9 0-18-6-19-16Z"/>
+              <path d="M6 46c5-4 10-4 15 0s10 4 15 0 10-4 15 0"/>
+              <path d="M6 54c5-4 10-4 15 0s10 4 15 0 10-4 15 0"/>
+            </g>
+          </svg>
+        </div>
+
+        <h3 class="stay__name">Lagoinha Kite Point</h3>
+
+        <ul class="stay__list">
+          <li>
+            <svg class="stay__icon"><use href="#i-whatsapp"/></svg>
+            <span><a class="tel" href="https://wa.me/5585999571182" target="_blank" rel="noopener">(85)&nbsp;99957-1182</a></span>
+          </li>
+          <li>
+            <svg class="stay__icon"><use href="#i-home"/></svg>
+            <span>Opção simples com localização de frente para o mar.</span>
+          </li>
+          <li>
+            <svg class="stay__icon"><use href="#i-pin-line"/></svg>
+            <span>Próximo ao local do envento. À beira-mar.</span>
+          </li>
+        </ul>
+
+        <a class="btn btn--outline btn--sm" href="https://www.instagram.com/lagoinhakitepoint?igsh=MTlkODRzdTVyY2c3dA==" target="_blank" rel="noopener">
+          <svg class="btn__icon"><use href="#i-instagram"/></svg>
+          <span>@lagoinhakitepoint</span>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="footer">
+    <div class="footer__note">
+      <svg class="footer__heart" aria-hidden="true"><use href="#i-heart"/></svg>
+      <p>
+        <strong>Qualquer dúvida, podem falar com a gente!</strong><br>
+        Estamos à disposição para ajudar no que precisarem.
+      </p>
+    </div>
+
+    <p class="footer__sign">
+      Contamos com vocês!
+      <svg class="footer__heart footer__heart--sm" aria-hidden="true"><use href="#i-heart"/></svg>
+    </p>
+  </footer>
+
+</main>
+
+</body>
+</html>
