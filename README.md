@@ -1,8 +1,8 @@
-# mayge.us
+# mayge.info
 
 Convite de casamento de **Mayara e Gêdhean** — 28 de novembro de 2026, Montepascual Ecovillage, Lagoinha, Ceará.
 
-Site publicado em <https://mayge.us>.
+Site publicado em <https://mayge.info>.
 
 ## Stack
 
