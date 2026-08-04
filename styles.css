@@ -416,6 +416,7 @@ svg { display: block; }
 .heart__icon {
   width: 100%;
   height: 100%;
+  fill: none;   /* padrão: só o contorno (o symbol não define mais o fill) */
 }
 .heart:hover { color: var(--green-soft); }
 .heart:focus-visible {
@@ -445,6 +446,37 @@ svg { display: block; }
   38%  { transform: scale(1.42); }
   70%  { transform: scale(.94); }
   100% { transform: scale(1); }
+}
+
+/* ---------- Recompensa: coração gigante ao ativar todos ---------- */
+.reward {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  pointer-events: none;   /* nunca bloqueia o convite */
+}
+.reward[hidden] { display: none; }
+
+.reward__heart {
+  width: min(58vw, 42vh);
+  height: min(58vw, 42vh);
+  color: var(--red);
+  fill: var(--red);
+  opacity: 0;
+  filter: drop-shadow(0 10px 32px rgba(0, 0, 0, .16));
+}
+.reward.is-showing .reward__heart {
+  animation: reward-bloom 2.3s cubic-bezier(.2, .7, .3, 1) forwards;
+}
+
+@keyframes reward-bloom {
+  0%   { opacity: 0;   transform: scale(.35); }
+  18%  { opacity: .96; transform: scale(1.06); }
+  32%  { opacity: .96; transform: scale(.99); }
+  60%  { opacity: .9;  transform: scale(1.03); }
+  100% { opacity: 0;   transform: scale(1.32); }
 }
 
 /* ---------- Card: Sobre a Região ---------- */
@@ -673,7 +705,7 @@ svg { display: block; }
     text-align: left;
   }
   /* empilhado: coração centralizado na base de cada coluna */
-  .heart { padding-top: 22px; }
+  /*.heart { padding-top: 22px; }*/
   .heart--left,
   .heart--right { margin-left: auto; margin-right: auto; }
 

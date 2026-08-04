@@ -65,9 +65,10 @@
         d="M4 10.4 12 4l8 6.4V20a.9.9 0 0 1-.9.9H4.9A.9.9 0 0 1 4 20v-9.6Z"/>
       <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M9.7 20.9v-5.5h4.6v5.5"/>
     </symbol>
-    <!-- coração -->
+    <!-- coração — o fill é controlado pelo CSS (fill: none por padrão),
+         para o easter egg poder preencher de vermelho ao ser ativado -->
     <symbol id="i-heart" viewBox="0 0 24 24">
-      <path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
+      <path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
         d="M12 20.3s-7.6-4.6-7.6-9.8a4.2 4.2 0 0 1 7.6-2.5 4.2 4.2 0 0 1 7.6 2.5c0 5.2-7.6 9.8-7.6 9.8Z"/>
     </symbol>
     <!-- alianças (cerimônia) -->
@@ -425,12 +426,44 @@
 
 </main>
 
-<!-- Easter egg: clicar num coração deixa ele vermelho e pulsando.
+<!-- Recompensa do easter egg: coração gigante que aparece no centro da tela
+     quando todos os corações forem ativados. Inerte até o JS acioná-lo. -->
+<div class="reward" hidden aria-hidden="true">
+  <svg class="reward__heart"><use href="#i-heart"/></svg>
+</div>
+
+<!-- Easter egg: clicar num coração deixa ele vermelho e pulsando; ativar
+     todos revela um coração gigante no centro da tela, que some sozinho.
      Progressive enhancement — sem JS o convite segue perfeitamente legível. -->
 <script>
 (function () {
   var hearts = document.querySelectorAll('.heart');
   if (!hearts.length) return;
+
+  var reward = document.querySelector('.reward');
+  var rewardTimer;
+
+  function allLiked() {
+    return Array.prototype.every.call(hearts, function (h) {
+      return h.classList.contains('is-liked');
+    });
+  }
+
+  function celebrate() {
+    if (!reward) return;
+
+    clearTimeout(rewardTimer);
+    reward.hidden = false;
+    reward.classList.remove('is-showing');
+    void reward.offsetWidth;           // reinicia a animação
+    reward.classList.add('is-showing');
+
+    // esconde de novo ao fim da animação (fallback caso animationend não dispare)
+    rewardTimer = setTimeout(function () {
+      reward.classList.remove('is-showing');
+      reward.hidden = true;
+    }, 2600);
+  }
 
   function toggle(btn) {
     var liked = btn.classList.toggle('is-liked');
@@ -441,6 +474,7 @@
       btn.classList.remove('is-popping');
       void btn.offsetWidth;
       btn.classList.add('is-popping');
+      if (allLiked()) celebrate();
     } else {
       btn.classList.remove('is-popping');
     }
@@ -454,6 +488,15 @@
       if (e.animationName === 'heart-pop') btn.classList.remove('is-popping');
     });
   });
+
+  if (reward) {
+    reward.addEventListener('animationend', function (e) {
+      if (e.animationName !== 'reward-bloom') return;
+      clearTimeout(rewardTimer);
+      reward.classList.remove('is-showing');
+      reward.hidden = true;
+    });
+  }
 })();
 </script>
 
