@@ -216,7 +216,10 @@
           <span>Impreterivelmente o sol não se atrasa</span>
         </li>
       </ul>
-      <svg class="heart heart--right" aria-hidden="true"><use href="#i-heart"/></svg>
+      <button class="heart heart--right" type="button" aria-pressed="false"
+              aria-label="Enviar um coração para os noivos">
+        <svg class="heart__icon" aria-hidden="true"><use href="#i-heart"/></svg>
+      </button>
     </article>
 
     <article class="col">
@@ -240,7 +243,10 @@
           Acesso pela CE-085 (estrada em boas condições)
         </li>
       </ul>
-      <svg class="heart heart--right" aria-hidden="true"><use href="#i-heart"/></svg>
+      <button class="heart heart--right" type="button" aria-pressed="false"
+              aria-label="Enviar um coração para os noivos">
+        <svg class="heart__icon" aria-hidden="true"><use href="#i-heart"/></svg>
+      </button>
     </article>
 
     <article class="col">
@@ -255,7 +261,10 @@
         para que possam aproveitar o evento com tranquilidade e
         total conforto.
       </p>
-      <svg class="heart heart--right" aria-hidden="true"><use href="#i-heart"/></svg>
+      <button class="heart heart--right" type="button" aria-pressed="false"
+              aria-label="Enviar um coração para os noivos">
+        <svg class="heart__icon" aria-hidden="true"><use href="#i-heart"/></svg>
+      </button>
     </article>
 
   </section>
@@ -395,7 +404,10 @@
   <!-- ============ RODAPÉ ============ -->
   <footer class="footer">
     <div class="footer__note">
-      <svg class="footer__heart" aria-hidden="true"><use href="#i-heart"/></svg>
+      <button class="footer__heart heart" type="button" aria-pressed="false"
+              aria-label="Enviar um coração para os noivos">
+        <svg class="heart__icon" aria-hidden="true"><use href="#i-heart"/></svg>
+      </button>
       <p>
         <strong>Qualquer dúvida, podem falar com a gente!</strong><br>
         Estamos à disposição para ajudar no que precisarem.
@@ -404,11 +416,46 @@
 
     <p class="footer__sign">
       Contamos com vocês!
-      <svg class="footer__heart footer__heart--sm" aria-hidden="true"><use href="#i-heart"/></svg>
+      <button class="footer__heart footer__heart--sm heart" type="button" aria-pressed="false"
+              aria-label="Enviar um coração para os noivos">
+        <svg class="heart__icon" aria-hidden="true"><use href="#i-heart"/></svg>
+      </button>
     </p>
   </footer>
 
 </main>
+
+<!-- Easter egg: clicar num coração deixa ele vermelho e pulsando.
+     Progressive enhancement — sem JS o convite segue perfeitamente legível. -->
+<script>
+(function () {
+  var hearts = document.querySelectorAll('.heart');
+  if (!hearts.length) return;
+
+  function toggle(btn) {
+    var liked = btn.classList.toggle('is-liked');
+    btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+
+    if (liked) {
+      // reinicia o "pop" a cada ativação
+      btn.classList.remove('is-popping');
+      void btn.offsetWidth;
+      btn.classList.add('is-popping');
+    } else {
+      btn.classList.remove('is-popping');
+    }
+  }
+
+  Array.prototype.forEach.call(hearts, function (btn) {
+    btn.addEventListener('click', function () { toggle(btn); });
+
+    // ao terminar o "pop", remove a classe para o pulso contínuo assumir
+    btn.addEventListener('animationend', function (e) {
+      if (e.animationName === 'heart-pop') btn.classList.remove('is-popping');
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
