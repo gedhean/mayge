@@ -70,6 +70,19 @@
       <path fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
         d="M12 20.3s-7.6-4.6-7.6-9.8a4.2 4.2 0 0 1 7.6-2.5 4.2 4.2 0 0 1 7.6 2.5c0 5.2-7.6 9.8-7.6 9.8Z"/>
     </symbol>
+    <!-- alianças (cerimônia) -->
+    <symbol id="i-rings" viewBox="0 0 24 24">
+      <circle cx="9.2" cy="15" r="5.4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="15.6" cy="15" r="5.4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+        d="M15.6 9.6 13.5 6.2h4.2L15.6 9.6Z"/>
+    </symbol>
+    <!-- sol no horizonte (pôr do sol) -->
+    <symbol id="i-sunset" viewBox="0 0 24 24">
+      <circle cx="12" cy="12.6" r="4.1" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+        d="M12 4.4v2M18.1 6.5l-1.4 1.4M20.2 12.6h-2M5.3 6.5l1.4 1.4M3.8 12.6h2M2.6 18.4h18.8"/>
+    </symbol>
     <!-- kitesurf / mar -->
     <symbol id="i-kite" viewBox="0 0 24 24">
       <path fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"
@@ -189,10 +202,19 @@
         </div>
         <h2 class="title">Programação</h2>
       </header>
-      <ul class="list">
-        <li>Início do casamento: 16:00</li>
-        <li>Cerimônia: 16:50</li>
-        <li>Encerramento: 22:00</li>
+      <ul class="facts">
+        <li>
+          <svg class="facts__icon"><use href="#i-clock"/></svg>
+          <span>Início do casamento: 16:00</span>
+        </li>
+        <li>
+          <svg class="facts__icon"><use href="#i-rings"/></svg>
+          <span>Cerimônia: 16:50</span>
+        </li>
+        <li>
+          <svg class="facts__icon"><use href="#i-sunset"/></svg>
+          <span>Impreterivelmente o sol não se atrasa</span>
+        </li>
       </ul>
       <svg class="heart heart--right" aria-hidden="true"><use href="#i-heart"/></svg>
     </article>

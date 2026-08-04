@@ -244,7 +244,6 @@ svg { display: block; }
 
 .venue {
   margin-top: 8px;
-  font-family: var(--serif);
   font-size: clamp(1.2rem, 2.8vw, 1.6rem);
   font-weight: 400;
   color: var(--ink);
@@ -370,31 +369,7 @@ svg { display: block; }
 }
 .col--center { text-align: center; }
 
-/* lista com marcadores (Programação) */
-.list {
-  margin-top: 26px;
-  display: grid;
-  gap: 14px;
-}
-.list li {
-  position: relative;
-  padding-left: 22px;
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--ink-soft);
-}
-.list li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: .62em;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--ink-soft);
-}
-
-/* lista com ícones (Como chegar) */
+/* lista com ícones (Programação e Como chegar) */
 .facts {
   margin-top: 26px;
   display: grid;
@@ -466,7 +441,7 @@ svg { display: block; }
 .lodging { margin-top: 46px; }
 
 .lodging__grid {
-  margin-top: 22px;
+  margin-top: 42px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: start;
